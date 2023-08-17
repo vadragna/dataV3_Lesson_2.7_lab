@@ -55,7 +55,7 @@ GROUP BY c.customer_id
 ORDER BY last_name;
 
 -- List the titles of films per category.
-SELECT GROUP_CONCAT(c.name) AS category_ids
+SELECT GROUP_CONCAT(c.name) AS category_ids, f.title
 FROM film f
 JOIN film_category f_c
 USING (film_id)
